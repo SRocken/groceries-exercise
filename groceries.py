@@ -39,10 +39,6 @@ for p in sorted_products:
     print(" + " + p["name"] + price_usd)
 
 
-# Count the products
-# Loop through the products and print each one
-# Put in alpha order
-# Show the price in USD format
 # --------------
 # THERE ARE 20 PRODUCTS:
 # --------------
@@ -80,10 +76,15 @@ print("--------------")
 unique_departments.sort()
 
 for d in unique_departments:
-    print(" + " + d.title())
+    matching_products_count = [p for p in products if p["department"] == d]
+    matching_products_count = len(matching_products_count)
+    if matching_products_count > 1:
+        label = "products"
+    else:
+        label = "product"
+    print(" + " + d.title() + " (" + str(matching_products_count) + " " + label +")")
 
 
-# The departments
 #--------------
 #THERE ARE 10 DEPARTMENTS:
 #--------------
