@@ -31,10 +31,15 @@ print("--------------")
 print("THERE ARE", len(products), "PRODUCTS:")
 print("--------------")
 
-for p in products:
-    #price_usd = p["price"]
+def sort_by_name(p):
+    return p["name"]
+
+sorted_products = sorted(products, key=sort_by_name)
+
+for p in sorted_products:
     price_usd = " (${0:.2f})".format(p["price"])
     print(" + " + p["name"] + price_usd)
+
 
 # Count the products
 # Loop through the products and print each one
