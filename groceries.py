@@ -25,8 +25,6 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-
-
 print("--------------")
 print("THERE ARE", len(products), "PRODUCTS:")
 print("--------------")
@@ -69,9 +67,33 @@ for p in sorted_products:
 # + Smart Ones Classic Favorites Mini Rigatoni With Vodka Cream Sauce ($6.99)
 # + Sparkling Orange Juice & Prickly Pear Beverage ($2.99)
 
+departments = []
+
+for p in products:
+    departments.append(p["department"])
+unique_departments = list(set(departments))
 
 print("--------------")
-print("THERE ARE", len(p["department"]), "DEPARTMENTS:")
+print("THERE ARE", len("department"), "DEPARTMENTS:")
 print("--------------")
+
+unique_departments.sort()
+
+for d in unique_departments:
+    print(" + " + d.title())
+
 
 # The departments
+#--------------
+#THERE ARE 10 DEPARTMENTS:
+#--------------
+# + Babies (1 product)
+# + Beverages (5 products)
+# + Dairy Eggs (1 product)
+# + Dry Goods Pasta (1 product)
+# + Frozen (4 products)
+# + Household (1 product)
+# + Meat Seafood (1 product)
+# + Pantry (2 products)
+# + Personal Care (2 products)
+# + Snacks (2 products)
