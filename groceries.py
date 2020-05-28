@@ -70,7 +70,7 @@ for p in products:
 unique_departments = list(set(departments))
 
 print("--------------")
-print("THERE ARE", len("department"), "DEPARTMENTS:")
+print("THERE ARE", len(departments), "DEPARTMENTS:")
 print("--------------")
 
 unique_departments.sort()
